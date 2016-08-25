@@ -61,8 +61,8 @@ class hello(unittest.TestCase):
 
 def isThereMyMailAtKMUTTOffice(remote=None,ip=None,port=None):
     result = None
-    # driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.FIREFOX)
-    driver = webdriver.Firefox()
+    driver = webdriver.Remote("http://localhost:4444/wd/hub", webdriver.DesiredCapabilities.FIREFOX)
+    # driver = webdriver.Firefox()
     driver.implicitly_wait(3)
     base_url = "http://hermes.kmutt.ac.th/"
     verificationErrors = []
