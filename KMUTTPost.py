@@ -12,10 +12,14 @@ numericDict = {
 @app.route('/')
 def hello_world():
     a = numericDict.copy()
-    if isThereMyMailAtKMUTTOffice():
-        a["data"]["value"] = "Go and Grab it!"
-    else:
-        a["data"]["value"] = "Nothing There"
+    try:
+        if isThereMyMailAtKMUTTOffice():
+            a["data"]["value"] = "Go and Grab it!"
+        else:
+            a["data"]["value"] = "Nothing There"
+    except:
+        a["data"]["value"] = "selenium connect fail"
+    finally:
         return jsonify(**a)
 
 
