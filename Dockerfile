@@ -1,4 +1,4 @@
-FROM python:3-onbuild
+FROM khozzy/selenium-python-chrome:lastest
 
 #WORKDIR /app
 #ADD requirements.txt /app/requirements.txt

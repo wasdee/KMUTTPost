@@ -10,12 +10,8 @@ import unittest, time, re
 
 def isThereMyMailAtKMUTTOffice():
     result = None
-    try:
-        # driver = webdriver.Remote("http://firefox/wd/hub", webdriver.DesiredCapabilities.FIREFOX)
-        driver = webdriver.Remote(command_executor="http://firefox:4444/wd/hub",desired_capabilities=webdriver.DesiredCapabilities.FIREFOX)
-    except Exception as e:
-        raise e
     # driver = webdriver.Firefox()
+    driver = webdriver.Chrome()
     driver.implicitly_wait(30)
     base_url = "http://hermes.kmutt.ac.th/"
     verificationErrors = []
